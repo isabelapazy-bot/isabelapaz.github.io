@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isabela Paz — International Development</title>
+<meta name="description" content="Isabela Paz is an international development professional and Returned Peace Corps Volunteer based in Washington, D.C.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FCFBF7;
+    --ink: #17242C;
+    --lake: #1B4553;      /* deep Andean lake teal */
+    --lake-soft: #3E6B79;
+    --gold: #A8843C;
+    --hairline: #E4E1D6;
+    --muted: #5C6A70;
+    --max: 1060px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--lake); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--lake);
+    outline-offset: 3px;
+  }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(252, 251, 247, 0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-inner {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 18px 28px; max-width: var(--max); margin: 0 auto;
+  }
+  .nav-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; font-weight: 600; letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .nav-links { display: flex; gap: 26px; }
+  .nav-links a {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .nav-links a:hover { color: var(--lake); text-decoration: none; }
+
+  /* ---------- Hero ---------- */
+  header { padding: 96px 0 72px; }
+  .hero-grid {
+    display: grid; grid-template-columns: 1fr 240px; gap: 56px; align-items: center;
+  }
+  .eyebrow {
+    font-family: 'Archivo', sans-serif;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(3rem, 7vw, 4.6rem);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+  }
+  .hero-line {
+    font-size: 1.2rem; font-weight: 300; color: var(--muted); max-width: 34em;
+  }
+  .hero-line strong { font-weight: 500; color: var(--ink); }
+  .portrait {
+    width: 240px; height: 300px; object-fit: cover;
+    border: 1px solid var(--hairline);
+    padding: 8px; background: #fff;
+    box-shadow: 6px 6px 0 rgba(27, 69, 83, 0.08);
+  }
+
+  /* ---------- Signature: the route ---------- */
+  .route {
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    padding: 26px 0;
+  }
+  .route-inner {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    max-width: var(--max); margin: 0 auto; padding: 0 28px;
+    position: relative;
+  }
+  .route-inner::before {
+    content: ""; position: absolute; left: 28px; right: 28px; top: 8px;
+    border-top: 1px dashed var(--lake-soft); opacity: 0.45;
+  }
+  .stop { position: relative; text-align: left; }
+  .stop::before {
+    content: ""; display: block; width: 9px; height: 9px; border-radius: 50%;
+    background: var(--lake); margin-bottom: 12px; position: relative; top: -1px;
+  }
+  .stop .place {
+    font-family: 'Archivo', sans-serif; font-size: 0.74rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink);
+  }
+  .stop .role {
+    font-size: 0.86rem; color: var(--muted); font-style: italic;
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: 84px 0 12px; }
+  .section-head {
+    display: flex; align-items: baseline; gap: 20px; margin-bottom: 44px;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500; font-size: 2rem; letter-spacing: 0;
+  }
+  .section-head .rule { flex: 1; border-top: 1px solid var(--hairline); }
+
+  .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 64px; }
+  .about-text p { margin-bottom: 1.1em; font-weight: 300; font-size: 1.06rem; }
+  .about-text p:first-child::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2em; float: left; line-height: 0.85;
+    padding-right: 10px; padding-top: 4px; color: var(--lake);
+  }
+  .aside-block { border-left: 2px solid var(--lake); padding-left: 22px; }
+  .aside-block h3 {
+    font-family: 'Archivo', sans-serif; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .aside-block ul { list-style: none; }
+  .aside-block li { font-size: 0.95rem; margin-bottom: 8px; color: var(--ink); }
+  .aside-block li span { color: var(--muted); font-style: italic; }
+
+  /* ---------- Experience ---------- */
+  .entry {
+    display: grid; grid-template-columns: 170px 1fr; gap: 36px;
+    padding: 30px 0; border-bottom: 1px solid var(--hairline);
+  }
+  .entry:last-of-type { border-bottom: none; }
+  .entry .when {
+    font-family: 'Archivo', sans-serif; font-size: 0.76rem; font-weight: 500;
+    letter-spacing: 0.08em; color: var(--muted); padding-top: 6px;
+  }
+  .entry h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.35rem;
+    margin-bottom: 2px;
+  }
+  .entry .org { font-style: italic; color: var(--lake-soft); margin-bottom: 10px; }
+  .entry p { font-weight: 300; color: var(--ink); max-width: 40em; }
+
+  /* ---------- Projects ---------- */
+  .project {
+    padding: 34px 0; border-bottom: 1px solid var(--hairline);
+    display: grid; grid-template-columns: 1fr; gap: 6px;
+  }
+  .project:last-of-type { border-bottom: none; }
+  .project .tag {
+    font-family: 'Archivo', sans-serif; font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  }
+  .project h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.6rem;
+  }
+  .project p { font-weight: 300; max-width: 44em; margin-top: 6px; }
+
+  /* ---------- Education ---------- */
+  .edu { padding: 22px 0; border-bottom: 1px solid var(--hairline); }
+  .edu:last-of-type { border-bottom: none; }
+  .edu h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.25rem; }
+  .edu p { color: var(--muted); font-size: 0.98rem; }
+
+  /* ---------- Strip ---------- */
+  .strip {
+    margin-top: 84px;
+    background: var(--lake); color: var(--paper);
+    padding: 40px 0;
+  }
+  .strip-inner {
+    display: flex; flex-wrap: wrap; gap: 18px 56px;
+    max-width: var(--max); margin: 0 auto; padding: 0 28px;
+  }
+  .strip-item { font-size: 0.95rem; font-weight: 300; }
+  .strip-item b {
+    font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 0.68rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    display: block; color: #CBB57E; margin-bottom: 4px;
+  }
+
+  /* ---------- Contact ---------- */
+  #contact { padding-bottom: 40px; }
+  .contact-line { font-size: 1.15rem; font-weight: 300; max-width: 36em; }
+  .contact-links { margin-top: 26px; display: flex; gap: 34px; flex-wrap: wrap; }
+  .contact-links a {
+    font-family: 'Archivo', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    border-bottom: 1px solid var(--gold); padding-bottom: 4px;
+  }
+  .contact-links a:hover { text-decoration: none; color: var(--gold); }
+  footer {
+    padding: 48px 28px 36px; text-align: center;
+    color: var(--muted); font-size: 0.82rem; font-style: italic;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 780px) {
+    header { padding: 60px 0 48px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+    .portrait { width: 180px; height: 226px; }
+    .route-inner { flex-direction: column; gap: 20px; }
+    .route-inner::before { display: none; }
+    .stop { display: flex; gap: 14px; align-items: baseline; }
+    .stop::before { margin-bottom: 0; flex-shrink: 0; }
+    .about-grid { grid-template-columns: 1fr; gap: 44px; }
+    .entry { grid-template-columns: 1fr; gap: 6px; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 0.66rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-name">Isabela Paz</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Washington, D.C.</div>
+      <h1>Isabela Paz</h1>
+      <p class="hero-line">International development professional and <strong>Returned Peace Corps Volunteer</strong>, working at the intersection of economic development and public health across the Americas.</p>
+    </div>
+    <!-- Replace src with your headshot file, e.g. "headshot.jpg" -->
+    <img class="portrait" src="headshot.jpg" alt="Portrait of Isabela Paz">
+  </div>
+</header>
+
+<div class="route" aria-label="Career geography">
+  <div class="route-inner">
+    <div class="stop"><div class="place">La Paz, Bolivia</div><div class="role">Roots &amp; ongoing work</div></div>
+    <div class="stop"><div class="place">Quito, Ecuador</div><div class="role">PwC, advisory</div></div>
+    <div class="stop"><div class="place">Katira, Costa Rica</div><div class="role">Peace Corps service</div></div>
+    <div class="stop"><div class="place">Washington, D.C.</div><div class="role">Current base</div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><h2>About</h2><div class="rule"></div></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I grew up between Bolivia and the United States, and my work has followed that same path across borders. After earning my B.S. in International Business and Marketing from the University of Maryland's Robert H. Smith School of Business, I served two years as a Community Economic Development Volunteer with the Peace Corps in rural Costa Rica, where I partnered with local institutions and youth entrepreneurs on projects the community will carry forward long after my service.</p>
+        <p>Today I'm based in Washington, D.C., where I coordinate business development for FunSalud, a health-focused foundation, and volunteer with UN Volunteers in support of Bolivia's National Committee for the International Year of Volunteers 2026. I work in English, Spanish, and French, and I care most about work that builds local capacity rather than dependence.</p>
+      </div>
+      <div class="aside-block">
+        <h3>Recognition</h3>
+        <ul>
+          <li>Peace Corps Connect Scholar</li>
+          <li>Hispanic Scholarship Fund Scholar</li>
+          <li>Phi Theta Kappa <span>honor society</span></li>
+          <li>First place, Raptor Tank pitch competition <span>Montgomery College, 2020</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head"><h2>Experience</h2><div class="rule"></div></div>
+
+    <div class="entry">
+      <div class="when">2024 — 2026</div>
+      <div>
+        <h3>Community Economic Development Volunteer</h3>
+        <div class="org">Peace Corps · Katira, Costa Rica</div>
+        <p>Served two years in a rural community, managing a community development grant and coordinating with five Costa Rican government institutions (INDER, ICT, DINADECO, INAMU, and MEIC). Led an 11-week Junior Achievement accelerator for 15 youth entrepreneurs, and served as a Community Economic Development Resource Trainer and Peer Support Network member for fellow Volunteers.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2023 — Present</div>
+      <div>
+        <h3>Business Development Coordinator</h3>
+        <div class="org">FunSalud / Foundation for Health</div>
+        <p>Building the foundation's operational infrastructure, including a full workspace redesign and website overhaul, while supporting the development of SmartVax, a trilingual digital vaccination platform.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2026</div>
+      <div>
+        <h3>Operations &amp; Development Coordinator</h3>
+        <div class="org">Isabella &amp; Ferdinand Academia de Español · Washington, D.C.</div>
+        <p>Supported operations and program logistics for a nine-week Spanish immersion summer camp, and created partnership pitch materials for school outreach.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Summer 2022</div>
+      <div>
+        <h3>Advisory Consulting Intern</h3>
+        <div class="org">PwC · Quito, Ecuador</div>
+        <p>Supported advisory engagements with the firm's Quito office, working in Spanish in a professional consulting environment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><h2>Selected Work</h2><div class="rule"></div></div>
+
+    <div class="project">
+      <div class="tag">Youth entrepreneurship · Costa Rica</div>
+      <h3>Junior Achievement Accelerator, Katira</h3>
+      <p>An 11-week entrepreneurship accelerator I organized and led for 15 young people in my Peace Corps community, built in partnership with Junior Achievement. Participants developed and pitched their own business ideas, gaining practical skills in planning, budgeting, and presentation that stay with them well beyond the program.</p>
+    </div>
+
+    <div class="project">
+      <div class="tag">Digital health · Bolivia, U.S., DRC</div>
+      <h3>SmartVax</h3>
+      <p>A trilingual (English, Spanish, French) digital vaccination platform in development through FunSalud. My role has spanned the project's early conceptual stages through vendor evaluation, business planning, and bilingual pitch materials.</p>
+    </div>
+
+    <div class="project">
+      <div class="tag">Volunteerism · United Nations</div>
+      <h3>International Year of Volunteers 2026, Bolivia</h3>
+      <p>As an Online Volunteer with UN Volunteers, I provide project management support to Bolivia's National Committee for the International Year of Volunteers 2026, coordinated with UNDP and led through the Office of the First Lady. Bolivia serves as the lead country for the year, proclaimed by the UN General Assembly.</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head"><h2>Education</h2><div class="rule"></div></div>
+    <div class="edu">
+      <h3>University of Maryland, Robert H. Smith School of Business</h3>
+      <p>B.S., International Business and Marketing · May 2024 · Hispanic Scholarship Fund Scholar</p>
+    </div>
+    <div class="edu">
+      <h3>Montgomery College</h3>
+      <p>A.A. · 4.0 GPA, Dean's List every semester · Phi Theta Kappa · President, Student Business Association · Project Lead, Enactus</p>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-item"><b>Languages</b>English · Spanish · French</div>
+    <div class="strip-item"><b>Certifications</b>Anthropic AI Fluency</div>
+    <div class="strip-item"><b>Community</b>National Peace Corps Association · RPCV network, D.C.</div>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head"><h2>Contact</h2><div class="rule"></div></div>
+    <p class="contact-line">I'm always glad to connect with people working in international development, global health, and the Peace Corps community.</p>
+    <div class="contact-links">
+      <!-- Replace these with your real links -->
+      <a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+  </div>
+</section>
+
+<footer>Isabela Paz · Washington, D.C.</footer>
+
+</body>
+</html>
